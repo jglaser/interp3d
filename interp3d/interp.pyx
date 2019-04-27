@@ -24,7 +24,7 @@ cpdef np.float_t _interp3D(np.float_t[:,:,::1] v, np.float_t x, np.float_t y, np
     yd = (y-y0)/(y1-y0)
     zd = (z-z0)/(z1-z0)
 
-    if x0 >= 0 and y0 >= 0 and z0 >= 0:
+    if x0 >= 0 and y0 >= 0 and z0 >= 0 and x1 < X and y1 < Y and z1 < Z:
         c00 = v_c[Y*Z*x0+Z*y0+z0]*(1-xd) + v_c[Y*Z*x1+Z*y0+z0]*xd
         c01 = v_c[Y*Z*x0+Z*y0+z1]*(1-xd) + v_c[Y*Z*x1+Z*y0+z1]*xd
         c10 = v_c[Y*Z*x0+Z*y1+z0]*(1-xd) + v_c[Y*Z*x1+Z*y1+z0]*xd
