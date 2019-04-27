@@ -29,6 +29,5 @@ interp_si = RegularGridInterpolator((x,y,z),arr)
 x0, y0, z0 = (1.1,0.25, 7.5)
 print('this class {}'.format(interp((x0,y0,z0))))
 print('scipy.optimize.RegularGridInterpolator() {}'.format(interp_si((x0,y0,z0)), x0+2*y0-3*z0))
-print('scipy.optimize.RegularGridInterpolator() {}'.format(interp_si((x0,y0,z0)), x0+2*y0-3*z0))
 print('exact {}'.format(x0+2*y0-3*z0))
 ```
